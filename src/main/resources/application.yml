@@ -1,0 +1,24 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - configprops
+        - env
+        - metrics
+        - prometheus
+        - health
+        - info
+        - threaddump
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+  prometheus:
+    enabled: true
+server:
+  port: 8080
+spring:
+  application:
+    name: emp-service
